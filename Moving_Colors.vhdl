@@ -50,19 +50,10 @@ begin
     process(EP, R, V, B)
     begin
         case(EP) is
-            when E1 => EF <= E1; if V = "11111" then EF <= E2; end if;
-            when E2 => EF <= E2; if B = "11111" then EF <= E3; end if;
-            when E3 => EF <= E3; if R = "11111" then EF <= E1; end if;
+            when E1 => EF <= E1; if V = "11111" then EF <= E2; end if; comR <= "01"; comV <= "00"; comB <= "10";
+            when E2 => EF <= E2; if B = "11111" then EF <= E3; end if; comR <= "10"; comV <= "01"; comB <= "00";
+            when E3 => EF <= E3; if R = "11111" then EF <= E1; end if; comR <= "00"; comV <= "10"; comB <= "01";
+            when others => null;
         end case;
     end process;
-    
-    process(EP)
-    begin
-        case(EP) is
-            when E1 => comR <= "01"; comV <= "00"; comB <= "10";
-            when E2 => comR <= "10"; comV <= "01"; comB <= "00";
-            when E3 => comR <= "00"; comV <= "10"; comB <= "01";
-        end case;
-    end process;
-
 end architecture;
