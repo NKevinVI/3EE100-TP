@@ -2,7 +2,9 @@
 
 ---
 
-## Ce _repository_ appartient à**NKevinVI** (NOCHÉ Kévin) et **SUN Yujia**.
+## Auteurs:
+
+Ce _repository_ appartient à**NKevinVI** (NOCHÉ Kévin) et **SUN Yujia**.
 
 ---
 
