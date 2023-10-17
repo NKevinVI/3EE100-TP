@@ -14,7 +14,9 @@ Ce _repository_ appartient à **NKevinVI** (NOCHÉ Kévin) et **SUN Yujia**.
 
 ---
 
-Ce _repository_ a été créé en vu de terminer un projet de fabrication d'un mini-jeu de casse-brique, pour l'UE 3EE100, à la Sorbonne Sciences.
+Ce _repository_ a été créé en vu de terminer un projet de fabrication d'un mini-jeu de casse-brique, pour l'UE 3EE100, à la _Sorbonne Sciences_.
+
+**ATTENTION**: Tous les codes n'ont pas été créés par les auteurs du repository! Certains codes appartiennent à la faculté des Sciences de _Sorbonne Université_.
 
 ---
 
