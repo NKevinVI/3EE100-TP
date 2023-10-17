@@ -22,8 +22,8 @@ architecture comport of Moving_Colors is
 type etat is(E1, E2, E3);
 signal Horloge: std_logic;
 signal R,V,B: std_logic_vector(4 downto 0);
-signal ComR, ComV, ComB, chg: std_logic_vector(1 downto 0);
-signal EP, EF: etat;
+signal ComR, ComV, ComB: std_logic_vector(1 downto 0);
+signal EP: etat;
 
 begin 
     Horl20: entity work.CLK20(comport)
@@ -43,17 +43,13 @@ begin
     process(CLK100, Reset)
     begin
         if Reset = '0' then EP <= E1;
-        elsif rising_edge(CLK100) then EP <= EF;
+        elsif rising_edge(CLK100) then
+            case(EP) is
+                when E1 => if V = "11111" then EP <= E2; end if; comR <= "01"; comV <= "00"; comB <= "10";
+                when E2 => if B = "11111" then EP <= E3; end if; comR <= "10"; comV <= "01"; comB <= "00";
+                when E3 => if R = "11111" then EP <= E1; end if; comR <= "00"; comV <= "10"; comB <= "01";
+                when others => null;
+            end case;
         end if;
-    end process;
-
-    process(EP, R, V, B)
-    begin
-        case(EP) is
-            when E1 => EF <= E1; if V = "11111" then EF <= E2; end if; comR <= "01"; comV <= "00"; comB <= "10";
-            when E2 => EF <= E2; if B = "11111" then EF <= E3; end if; comR <= "10"; comV <= "01"; comB <= "00";
-            when E3 => EF <= E3; if R = "11111" then EF <= E1; end if; comR <= "00"; comV <= "10"; comB <= "01";
-            when others => null;
-        end case;
     end process;
 end architecture;
