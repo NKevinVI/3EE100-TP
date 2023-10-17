@@ -2,7 +2,7 @@
 
 ---
 
-**Remarque**: Les fichiers voyant leur nom commencer par "TB" sont des _tests bench_.
+**Remarque**: Les fichiers voyant leur nom commencer par "TB_" sont des _tests bench_.
 
 ---
 
