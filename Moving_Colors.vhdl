@@ -33,7 +33,7 @@ begin
         port map(Horloge,reset,comB,B);
     compteurR : entity work.CompteurR(comport)
         port map(Horloge,reset,comR,R);
-    compteurV : entity work.CompteurV(comport)
+    compteurV : entity work.CompteurG(comport)
         port map(Horloge,reset,comV,V);
 
     Red_out<=r(4 downto 1);

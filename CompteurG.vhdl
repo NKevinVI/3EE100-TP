@@ -25,13 +25,13 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.std_logic_arith.all;
 
 
-entity CompteurV is
+entity CompteurG is
     port (Clk, reset: in std_logic;
         Com: in std_logic_vector(1 downto 0);
         Sortie: out std_logic_vector(4 downto 0));
 end entity;
 
-architecture comport of CompteurV is
+architecture comport of CompteurG is
     signal reg: std_logic_vector(4 downto 0);
     begin
     sortie <= reg;
@@ -48,4 +48,3 @@ architecture comport of CompteurV is
     end if;
     end process;
 end architecture;
-
