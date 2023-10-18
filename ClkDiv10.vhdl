@@ -23,6 +23,6 @@ architecture comport of ClkDiv10 is
         end if;
     end process;
     
-    Clk10<=not(reg(3));
+    Clk10<=not((reg(3) and reg(1)));
 
 end architecture;
