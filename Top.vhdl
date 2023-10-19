@@ -34,11 +34,11 @@ begin
     Reset_N <= not Reset; -- Reset Actif au Niveau Bas
 
     -- Diviseur Horloge 100 MHz --> 25 Mhz
-    Diviseur:   entity work.ClkDiv
+    Diviseur:   entity work.Clk25
                 port map(
                     clk100 => Clk100,   -- Horloge 100 Mhz
                     reset => Reset_N,   -- Reset Asynchrone
-                    clk25 => Clk25      -- Horloge 25 MHz
+                    clk_25 => Clk25      -- Horloge 25 MHz
                 );
 
 
