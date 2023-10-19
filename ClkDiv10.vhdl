@@ -11,18 +11,19 @@ entity ClkDiv10 is
 end entity;
 
 architecture comport of ClkDiv10 is
-    signal reg: std_logic_vector(3 downto 0);
+    signal cpt: std_logic_vector(3 downto 0) := "0000";
+    signal clk: std_logic := '0';
     begin
-    
-    process(CLk100, Reset)
+    Clk10 <= clk;
+    process(Clk100, Reset)
         begin
-        if (Reset = '0') then
-            reg <= (others => '0');
-        elsif (Clk100'event and Clk100 = '1') then
-            reg <= reg+1;
+        if (Clk100'event and Clk100 = '1') then
+            if (cpt = "1010") then
+                cpt <= (others => '0');
+                clk <= not(clk);
+            else
+                cpt <= cpt+1;
+            end if;
         end if;
     end process;
-    
-    Clk10<=not((reg(3) and reg(1)));
-
 end architecture;

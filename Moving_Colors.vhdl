@@ -19,14 +19,14 @@ entity Moving_Colors is
 end entity;
 
 architecture comport of Moving_Colors is
-type etat is(E1, E2, E3);
+type etat is (E1, E2, E3);
 signal Horloge: std_logic;
 signal R,V,B: std_logic_vector(4 downto 0);
 signal ComR, ComV, ComB: std_logic_vector(1 downto 0);
-signal EP: etat;
+signal E: etat;
 
 begin 
-    Horl20: entity work.CLK20(comport)
+    Horl20: entity work.CLKDIV10(comport)
         port map (Clk100, reset,Horloge);
 
     compteurB : entity work.CompteurB(comport)
@@ -36,18 +36,18 @@ begin
     compteurV : entity work.CompteurG(comport)
         port map(Horloge,reset,comV,V);
 
-    Red_out<=r(4 downto 1);
-    Green_out<=v(4 downto 1);
-    Blue_out<=b(4 downto 1);
+    Red_out <= r(4 downto 1);
+    Green_out <= v(4 downto 1);
+    Blue_out <= b(4 downto 1);
 
     process(CLK100, Reset)
     begin
-        if Reset = '0' then EP <= E1;
+        if Reset = '0' then E <= E1;
         elsif rising_edge(CLK100) then
-            case(EP) is
-                when E1 => if V = "11111" then EP <= E2; end if; comR <= "01"; comV <= "00"; comB <= "10";
-                when E2 => if B = "11111" then EP <= E3; end if; comR <= "10"; comV <= "01"; comB <= "00";
-                when E3 => if R = "11111" then EP <= E1; end if; comR <= "00"; comV <= "10"; comB <= "01";
+            case(E) is
+                when E1 => if V = "11111" then E <= E2; end if; comR <= "01"; comV <= "00"; comB <= "10";
+                when E2 => if B = "11111" then E <= E3; end if; comR <= "10"; comV <= "01"; comB <= "00";
+                when E3 => if R = "11111" then E <= E1; end if; comR <= "00"; comV <= "10"; comB <= "01";
                 when others => null;
             end case;
         end if;

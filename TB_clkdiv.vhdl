@@ -2,11 +2,10 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity TB_ClkDiv is
+entity TB_ClkDiv10 is
+end entity;
 
-end TB_ClkDiv;
-
-architecture Behavioral of TB_ClkDiv is
+architecture bench of TB_ClkDiv10 is
 
 signal H_100, RAZ: std_logic:='0';
 signal H_10: std_logic;
@@ -24,4 +23,4 @@ l0: entity work.ClkDiv10
 H_100<=not H_100 after 5 ns;
 RAZ <='1' after 3 ns;
 
-end Behavioral;
+end architecture;
