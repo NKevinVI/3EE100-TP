@@ -45,9 +45,9 @@ begin
         if Reset = '0' then E <= E1;
         elsif rising_edge(CLK100) then
             case(E) is
-                when E1 => if V = "11111" then E <= E2; end if; comR <= "01"; comV <= "00"; comB <= "10";
-                when E2 => if B = "11111" then E <= E3; end if; comR <= "10"; comV <= "01"; comB <= "00";
-                when E3 => if R = "11111" then E <= E1; end if; comR <= "00"; comV <= "10"; comB <= "01";
+                when E1 => if V = "11111" then E <= E2; end if; comR <= "01"; comV <= "10"; comB <= "00";
+                when E2 => if B = "11111" then E <= E3; end if; comR <= "00"; comV <= "01"; comB <= "10";
+                when E3 => if R = "11111" then E <= E1; end if; comR <= "10"; comV <= "00"; comB <= "01";
                 when others => null;
             end case;
         end if;
