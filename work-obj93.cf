@@ -1,37 +1,37 @@
 v 4
-file . "VGA_4bits.vhdl" "c19a98bc87554768b7f4e7792c1e91a32b6f09d1" "20231019111757.646":
-  entity vga_4bits at 8( 302) + 0 on 71;
-  architecture archi of vga_4bits at 24( 979) + 0 on 72;
-file . "Clk25.vhdl" "5bb99d6bb538e8b7ab914d2f6a817235a2bcf0ac" "20231019111459.072":
-  entity clk25 at 1( 0) + 0 on 69;
-  architecture comport of clk25 at 13( 229) + 0 on 70;
-file . "ClkDiv10.vhdl" "eaf0e658736de01bdec8eb6433ab1ea3000fca4e" "20231019113417.950":
-  entity clkdiv10 at 1( 0) + 0 on 83;
-  architecture comport of clkdiv10 at 13( 231) + 0 on 84;
-file . "TB_Clk20.vhdl" "c4313af529c8d9f07d56fccd6fd1cc8627718d58" "20231017152121.207":
-  entity tb_clk20 at 1( 0) + 0 on 53;
-  architecture bench of tb_clk20 at 10( 140) + 0 on 54;
-file . "Moving_Colors.vhdl" "a31ccdd09cdf188e188586c955c4702fa8dde543" "20231019114705.862":
-  entity moving_colors at 1( 0) + 0 on 97;
-  architecture comport of moving_colors at 21( 567) + 0 on 98;
-file . "CompteurB.vhdl" "d3e795b60d3d4c1138c48f73ace1a44977f6c8f1" "20231019114702.363":
-  entity compteurb at 1( 0) + 0 on 95;
-  architecture comport of compteurb at 13( 274) + 0 on 96;
-file . "CompteurR.vhdl" "1320aa184f2db2494697d0af8c50b3e54fe8f31e" "20231019114656.462":
-  entity compteurr at 1( 0) + 0 on 91;
-  architecture comport of compteurr at 13( 274) + 0 on 92;
-file . "CompteurG.vhdl" "2bb602e17b86a09f33d622cce6895b81ff783cf7" "20231019114659.965":
-  entity compteurg at 1( 0) + 0 on 93;
-  architecture comport of compteurg at 13( 274) + 0 on 94;
-file . "Clk20.vhdl" "cac891c15ded13e31c583be60ed891af634756dc" "20231017135454.161":
-  entity clk20 at 1( 0) + 0 on 17;
-  architecture comport of clk20 at 12( 198) + 0 on 18;
-file . "TB_MovingColors.vhdl" "996a0f903128e90d02ea0c47b4db8cd486828f20" "20231019114709.939":
-  entity tb_movingcolors at 1( 0) + 0 on 99;
-  architecture bench of tb_movingcolors at 10( 147) + 0 on 100;
+file . "Top.vhdl" "0265e3f0c5626eba0b291bbc1da42bc581d99cda" "20231019115653.224":
+  entity top at 10( 299) + 0 on 101;
+  architecture behavioral of top at 26( 1304) + 0 on 102;
 file . "TB_clkdiv.vhdl" "f306eb2d2e3d1cac3d78127f2db2a4e779ab1a6c" "20231019113424.435":
   entity tb_clkdiv10 at 1( 0) + 0 on 85;
   architecture bench of tb_clkdiv10 at 8( 119) + 0 on 86;
-file . "Top.vhdl" "0265e3f0c5626eba0b291bbc1da42bc581d99cda" "20231019111758.955":
-  entity top at 10( 299) + 0 on 73;
-  architecture behavioral of top at 26( 1304) + 0 on 74;
+file . "TB_MovingColors.vhdl" "996a0f903128e90d02ea0c47b4db8cd486828f20" "20231019114709.939":
+  entity tb_movingcolors at 1( 0) + 0 on 99;
+  architecture bench of tb_movingcolors at 10( 147) + 0 on 100;
+file . "Clk20.vhdl" "cac891c15ded13e31c583be60ed891af634756dc" "20231017135454.161":
+  entity clk20 at 1( 0) + 0 on 17;
+  architecture comport of clk20 at 12( 198) + 0 on 18;
+file . "CompteurG.vhdl" "2bb602e17b86a09f33d622cce6895b81ff783cf7" "20231019114659.965":
+  entity compteurg at 1( 0) + 0 on 93;
+  architecture comport of compteurg at 13( 274) + 0 on 94;
+file . "CompteurR.vhdl" "1320aa184f2db2494697d0af8c50b3e54fe8f31e" "20231019114656.462":
+  entity compteurr at 1( 0) + 0 on 91;
+  architecture comport of compteurr at 13( 274) + 0 on 92;
+file . "CompteurB.vhdl" "d3e795b60d3d4c1138c48f73ace1a44977f6c8f1" "20231019114702.363":
+  entity compteurb at 1( 0) + 0 on 95;
+  architecture comport of compteurb at 13( 274) + 0 on 96;
+file . "Moving_Colors.vhdl" "a31ccdd09cdf188e188586c955c4702fa8dde543" "20231019114705.862":
+  entity moving_colors at 1( 0) + 0 on 97;
+  architecture comport of moving_colors at 21( 567) + 0 on 98;
+file . "TB_Clk20.vhdl" "c4313af529c8d9f07d56fccd6fd1cc8627718d58" "20231017152121.207":
+  entity tb_clk20 at 1( 0) + 0 on 53;
+  architecture bench of tb_clk20 at 10( 140) + 0 on 54;
+file . "ClkDiv10.vhdl" "eaf0e658736de01bdec8eb6433ab1ea3000fca4e" "20231019113417.950":
+  entity clkdiv10 at 1( 0) + 0 on 83;
+  architecture comport of clkdiv10 at 13( 231) + 0 on 84;
+file . "Clk25.vhdl" "5bb99d6bb538e8b7ab914d2f6a817235a2bcf0ac" "20231019111459.072":
+  entity clk25 at 1( 0) + 0 on 69;
+  architecture comport of clk25 at 13( 229) + 0 on 70;
+file . "VGA_4bits.vhdl" "c19a98bc87554768b7f4e7792c1e91a32b6f09d1" "20231019111757.646":
+  entity vga_4bits at 8( 302) + 0 on 71;
+  architecture archi of vga_4bits at 24( 979) + 0 on 72;
