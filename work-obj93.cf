@@ -26,3 +26,6 @@ file . "TB_Clk20.vhdl" "c4313af529c8d9f07d56fccd6fd1cc8627718d58" "2023101715212
 file . "ClkDiv10.vhdl" "e8e091a64aeabc7474bdb830ce68244d2cae4a3e" "20231018120126.809":
   entity clkdiv10 at 1( 0) + 0 on 63;
   architecture comport of clkdiv10 at 13( 231) + 0 on 64;
+file . "Clk25.vhdl" "5bb99d6bb538e8b7ab914d2f6a817235a2bcf0ac" "20231019111459.072":
+  entity clk25 at 1( 0) + 0 on 69;
+  architecture comport of clk25 at 13( 229) + 0 on 70;
