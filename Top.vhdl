@@ -1,21 +1,12 @@
-----------------------------------------------------------------------------------
--- Company: Sorbonne Université
--- Engineer: Julien Denoulet
---
--- Affichage VGA 4 bits - Commande de Couleur par Interrupteurs
---
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity Top is
     Port ( Clk100 : in STD_LOGIC;                           -- Horloge 100 MHz
            Reset : in STD_LOGIC;                            -- Reset Asynchrone
-           Red : in STD_LOGIC_VECTOR (3 downto 0);          -- Consigne Couleur Rouge (4 bits)
-           Green : in STD_LOGIC_VECTOR (3 downto 0);        -- Consigne Couleur Verte (4 bits)
-           Blue : in STD_LOGIC_VECTOR (3 downto 0);         -- Consigne Couleur Bleue (4 bits)
+--           Red : in STD_LOGIC_VECTOR (3 downto 0);          -- Consigne Couleur Rouge (4 bits)
+--           Green : in STD_LOGIC_VECTOR (3 downto 0);        -- Consigne Couleur Verte (4 bits)
+--           Blue : in STD_LOGIC_VECTOR (3 downto 0);         -- Consigne Couleur Bleue (4 bits)
            VGA_Red : out STD_LOGIC_VECTOR (3 downto 0);     -- Composante Rouge de la Couleur VGA Affichée
            VGA_Green : out STD_LOGIC_VECTOR (3 downto 0);   -- Composante Verte de la Couleur VGA Affichée
            VGA_Blue : out STD_LOGIC_VECTOR (3 downto 0);    -- Composante Bleue de la Couleur VGA Affichée
@@ -23,22 +14,22 @@ entity Top is
            VSync : out STD_LOGIC);                          -- Synchro Verticale VGA
 end Top;
 
-architecture Behavioral of Top is
+architecture comport of Top is
 
 signal Clk25: std_logic;                            -- Horloge 25 MHz
 
 signal Reset_N: std_logic;                          -- Reset Actif Bas
-
+signal Red,Green,Blue:STD_LOGIC_VECTOR (3 downto 0);
 begin
 
     Reset_N <= not Reset; -- Reset Actif au Niveau Bas
 
     -- Diviseur Horloge 100 MHz --> 25 Mhz
-    Diviseur:   entity work.Clk25
+    Diviseur:   entity work.ClkDiv
                 port map(
                     clk100 => Clk100,   -- Horloge 100 Mhz
                     reset => Reset_N,   -- Reset Asynchrone
-                    clk_25 => Clk25      -- Horloge 25 MHz
+                    clk_int => Clk25     -- Horloge 25 MHz
                 );
 
 
@@ -60,5 +51,8 @@ begin
                     xpos => open,           -- Coordonnée X du Pixel Courant
                     ypos => open            -- Coordonnee Y du Pixel Courant
                 );
+      Colors: entity work.Moving_colors
+            port map (CLK100,reset,Red,Green,Blue);
 
-end Behavioral;
+
+end architecture;
