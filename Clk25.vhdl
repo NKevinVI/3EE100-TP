@@ -4,6 +4,9 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.std_logic_arith.all;
 
 
+-- Divise la période de Clk100 par 4 (soit 24 MHz).
+
+
 entity Clk25 is
     port(Clk100: in std_logic;
         Reset: in std_logic;

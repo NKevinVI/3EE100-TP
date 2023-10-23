@@ -26,7 +26,7 @@ signal ComR, ComV, ComB: std_logic_vector(1 downto 0);
 signal EP,EF: etat;
 
 begin
-    Horl20: entity work.CLK20(comport)
+    Horl20: entity work.ClkDiv10(comport)
         port map (Clk100, reset,Horloge);
 
     compteurB : entity work.CompteurB(comport)
@@ -58,9 +58,9 @@ begin
     process(EP) -- Contrôle des compteurs selon l'état actuel
     begin
         case(EP) is
-            when E1 => comr <= "01"; comV <= "00"; comB <= "10";
-            when E2 => comr <= "10"; comV <= "01"; comB <= "00";     -- 00 : + | 01 : - | 10/11 : =
-            when E3 => comr <= "00"; comV <= "10"; comB <= "01";
+            when E1 => comr <= "01"; comV <= "10"; comB <= "00";
+            when E2 => comr <= "00"; comV <= "01"; comB <= "10";     -- 10 : + | 01 : - | 00/11 : =
+            when E3 => comr <= "10"; comV <= "00"; comB <= "01";
         end case;
     end process;
 end architecture;
