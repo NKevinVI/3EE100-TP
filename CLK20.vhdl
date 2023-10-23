@@ -1,22 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 2023/10/18 22:20:49
--- Design Name: 
--- Module Name: CLK20 - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;

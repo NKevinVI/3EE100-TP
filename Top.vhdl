@@ -1,12 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: Sorbonne Universit?
--- Engineer: Julien Denoulet
---
--- Affichage VGA 4 bits - Commande de Couleur par Interrupteurs
---
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
