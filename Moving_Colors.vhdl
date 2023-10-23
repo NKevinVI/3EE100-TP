@@ -26,7 +26,7 @@ signal ComR, ComV, ComB: std_logic_vector(1 downto 0);
 signal EP,EF: etat;
 
 begin
-    Horl20: entity work.CLKDIV10(comport)
+    Horl20: entity work.CLK20(comport)
         port map (Clk100, reset,Horloge);
 
     compteurB : entity work.CompteurB(comport)

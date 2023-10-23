@@ -1,3 +1,12 @@
+----------------------------------------------------------------------------------
+-- Company: Sorbonne Universit?
+-- Engineer: Julien Denoulet
+--
+-- Affichage VGA 4 bits - Commande de Couleur par Interrupteurs
+--
+----------------------------------------------------------------------------------
+
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -14,7 +23,7 @@ entity Top is
            VSync : out STD_LOGIC);                          -- Synchro Verticale VGA
 end Top;
 
-architecture comport of Top is
+architecture Behavioral of Top is
 
 signal Clk25: std_logic;                            -- Horloge 25 MHz
 
@@ -54,5 +63,5 @@ begin
       Colors: entity work.Moving_colors
             port map (CLK100,reset,Red,Green,Blue);
 
-
-end architecture;
+       
+end Behavioral;

@@ -19,7 +19,7 @@ port (
 		endframe: out std_logic;							-- Dernier Pixel Visible d'une Trame
 		xpos,ypos: out std_logic_vector(9 downto 0)	-- Coordonnees du Pixel Courant
 	);
-end entity;
+end VGA_4bits;
 
 architecture archi of VGA_4bits is
 
@@ -35,9 +35,9 @@ signal image_visible: std_logic;
 begin
 
 	-- Affichage Couleur
-	red <= r when image_visible='1' else (others => '0');
-	green <= g when image_visible='1' else (others => '0'); 
-	blue <= b when image_visible='1' else (others => '0');
+	red <= r when image_visible='1' else "0000";
+	green <= g when image_visible='1' else "0000"; 
+	blue <= b when image_visible='1' else "0000";
 
 	-- Affectation en Sortie des Coordonnnees Pixel
 	xpos <= xcord; 
