@@ -14,7 +14,7 @@ entity Top is
            VSync : out STD_LOGIC);                          -- Synchro Verticale VGA
 end Top;
 
-architecture Behavioral of Top is
+architecture comport of Top is
 
 signal Clk25: std_logic;                            -- Horloge 25 MHz
 
@@ -55,4 +55,4 @@ begin
             port map (CLK100,reset,Red,Green,Blue);
 
        
-end Behavioral;
+end architecture;

@@ -22,4 +22,4 @@ begin
             end if;
         end if;
     end process;
-end comport;
+end architecture;

@@ -19,9 +19,9 @@ port (
 		endframe: out std_logic;							-- Dernier Pixel Visible d'une Trame
 		xpos,ypos: out std_logic_vector(9 downto 0)	-- Coordonnees du Pixel Courant
 	);
-end VGA_4bits;
+end entity;
 
-architecture archi of VGA_4bits is
+architecture comport of VGA_4bits is
 
 -- Compteur Coordonnnees Pixel
 signal xcord,ycord: std_logic_vector(9 downto 0);
@@ -136,4 +136,4 @@ begin
 			end if;
 	end process;
 
-end archi;
+end architecture;
