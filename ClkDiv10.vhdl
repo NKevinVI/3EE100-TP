@@ -4,6 +4,9 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.std_logic_arith.all;
 
 
+-- Divise la période de la Clock d'entrée par 10.
+
+
 entity ClkDiv10 is
     port(Clk100: in std_logic;
         Reset: in std_logic;
@@ -18,7 +21,7 @@ architecture comport of ClkDiv10 is
     process(Clk100, Reset)
         begin
         if (Clk100'event and Clk100 = '1') then
-            if (cpt = "1010") then
+            if (cpt = "1001") then
                 cpt <= (others => '0');
                 clk <= not(clk);
             else

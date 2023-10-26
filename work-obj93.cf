@@ -8,9 +8,9 @@ file . "VGA_4bits.vhdl" "8487c92b4501ff1cefd8c449f868689079d12079" "202310231531
 file . "Clk25.vhdl" "0248a158e58f42a1d095b319e370e2b55441c832" "20231023153119.367":
   entity clk25 at 1( 0) + 0 on 181;
   architecture comport of clk25 at 16( 284) + 0 on 182;
-file . "ClkDiv10.vhdl" "eaf0e658736de01bdec8eb6433ab1ea3000fca4e" "20231023151846.121":
-  entity clkdiv10 at 1( 0) + 0 on 171;
-  architecture comport of clkdiv10 at 13( 231) + 0 on 172;
+file . "ClkDiv10.vhdl" "f41ef4d268cca478d50a94f5ee92bf65228375e4" "20231026072159.668":
+  entity clkdiv10 at 1( 0) + 0 on 189;
+  architecture comport of clkdiv10 at 16( 285) + 0 on 190;
 file . "TB_Clk20.vhdl" "da8ea1ab83e88646055dc367515233ab82eee977" "20231023151648.035":
   entity tb_clk20 at 1( 0) + 0 on 169;
   architecture bench of tb_clk20 at 10( 140) + 0 on 170;
@@ -32,9 +32,9 @@ file . "Clk20.vhdl" "f435ad57f5f8cbcbf344324ac26a7f0049fcdd0e" "20231023150450.7
 file . "TB_MovingColors.vhdl" "996a0f903128e90d02ea0c47b4db8cd486828f20" "20231023152045.122":
   entity tb_movingcolors at 1( 0) + 0 on 177;
   architecture bench of tb_movingcolors at 10( 147) + 0 on 178;
-file . "TB_clkdiv.vhdl" "f306eb2d2e3d1cac3d78127f2db2a4e779ab1a6c" "20231023151850.310":
-  entity tb_clkdiv10 at 1( 0) + 0 on 173;
-  architecture bench of tb_clkdiv10 at 8( 119) + 0 on 174;
+file . "TB_clkdiv.vhdl" "f306eb2d2e3d1cac3d78127f2db2a4e779ab1a6c" "20231026072211.930":
+  entity tb_clkdiv10 at 1( 0) + 0 on 191;
+  architecture bench of tb_clkdiv10 at 8( 119) + 0 on 192;
 file . "Top.vhdl" "5e81d93ebedf254fabde8b68dbeb2d10d1e0d53a" "20231023153211.552":
   entity top at 1( 0) + 0 on 185;
   architecture behavioral of top at 17( 1011) + 0 on 186;
