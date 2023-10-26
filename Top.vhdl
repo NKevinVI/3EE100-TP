@@ -52,7 +52,7 @@ begin
                     ypos => open            -- Coordonnee Y du Pixel Courant
                 );
       Colors: entity work.Moving_colors
-            port map (CLK100,reset,Red,Green,Blue);
+            port map (CLK100,reset_N,Red,Green,Blue);
 
        
 end architecture;
