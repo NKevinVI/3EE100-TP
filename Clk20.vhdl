@@ -4,6 +4,9 @@ use ieee.std_logic_unsigned.all;
 use ieee.std_logic_arith.all;
 
 
+-- Clock de 20 Hz.
+
+
 entity CLK20 is
 port(CLK100,reset:in std_logic;
      CLock_int:out std_logic);
