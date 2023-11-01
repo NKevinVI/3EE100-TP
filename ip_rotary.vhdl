@@ -39,9 +39,8 @@ begin
 	-- Generation des Commandes de Rotation
 	---------------------------------------------------------------------
 	-- REMPLACER CES 2 INSTRUCTIONS PAR L'INSTANCIATION DU MODULE MOVE --
-	rot_left		<= '0';
-	rot_right 	<= '0';
+	deplacement: entity work.Move(comport)
+		port map(qa, qb, clk25, reset, rot_left, rot_right);
 	---------------------------------------------------------------------
 
 end Behavioral;
-
