@@ -342,46 +342,46 @@ pause_rqt <= own_press;
 
 
 	-- CONTROLEUR VGA
-	vga_ctrl: entity work.VGA
-            port map (
-                clk25     => clk25,        -- Horloge 25 MHz
-                reset     => reset,        -- Reset Asynchrone
-                r            => red(3),            -- Commande Affichage Rouge
-                g             => green(3),        -- Commande Affichage Vert
-                b             => blue(3),            -- Commande Affichage Bleu
-                red         => VGA_red(3),        -- Affichage Pixel Rouge
-                green     => VGA_green(3),    -- Affichage Pixel Vert
-                blue         => VGA_blue(3),    -- Affichage Pixel Bleu
-                vsync     => vsync,        -- Synchro Verticale
-                hsync     => hsync,        -- Synchro Horizontale
-                visible     => visible,        -- Zone Visible de l'Image
-                endframe    => endframe,    -- Fin de l'Image Visible
-                xpos      => xpos,            -- Coordonnee X du Pixel Courant
-                ypos      => ypos);        -- Coordonnee Y du Pixel Courant
+	--vga_ctrl: entity work.VGA
+            --port map (
+                --clk25     => clk25,        -- Horloge 25 MHz
+                --reset     => reset,        -- Reset Asynchrone
+                --r            => red(3),            -- Commande Affichage Rouge
+                --g             => green(3),        -- Commande Affichage Vert
+                --b             => blue(3),            -- Commande Affichage Bleu
+                --red         => VGA_red(3),        -- Affichage Pixel Rouge
+                --green     => VGA_green(3),    -- Affichage Pixel Vert
+                --blue         => VGA_blue(3),    -- Affichage Pixel Bleu
+                --vsync     => vsync,        -- Synchro Verticale
+                --hsync     => hsync,        -- Synchro Horizontale
+                --visible     => visible,        -- Zone Visible de l'Image
+                --endframe    => endframe,    -- Fin de l'Image Visible
+                --xpos      => xpos,            -- Coordonnee X du Pixel Courant
+                --ypos      => ypos);        -- Coordonnee Y du Pixel Courant
 
-VGA_red(2 downto 0) <= "000";
-VGA_green(2 downto 0) <= "000";
-VGA_blue(2 downto 0) <= "000";
+--VGA_red(2 downto 0) <= "000";
+--VGA_green(2 downto 0) <= "000";
+--VGA_blue(2 downto 0) <= "000";
 
 -----------------------------------------------------------------------------------
 
     -- CONTROLEUR VGA 4 bits
---    vga_ctrl: entity work.VGA_4bits
---            port map (
---                clk25     => clk25,        -- Horloge 25 MHz
---                reset     => reset,        -- Reset Asynchrone
---				  r			=> VGA_red_i,		-- Commande Affichage Rouge
---				  g 		=> VGA_green_i,		-- Commande Affichage Vert
---				  b 		=> VGA_blue_i,		-- Commande Affichage Bleu
---                red         => VGA_red,        -- Affichage Pixel Rouge
---                green     => VGA_green,    -- Affichage Pixel Vert
---                blue         => VGA_blue,    -- Affichage Pixel Bleu
---                vsync     => vsync,        -- Synchro Verticale
---                hsync     => hsync,        -- Synchro Horizontale
---                visible     => visible,        -- Zone Visible de l'Image
---                endframe    => endframe,    -- Fin de l'Image Visible
---                xpos      => xpos,            -- Coordonnee X du Pixel Courant
---                ypos      => ypos);        -- Coordonnee Y du Pixel Courant
+   vga_ctrl: entity work.VGA_4bits
+           port map (
+               clk25     => clk25,        -- Horloge 25 MHz
+               reset     => reset,        -- Reset Asynchrone
+				  r			=> VGA_red_i,		-- Commande Affichage Rouge
+				  g 		=> VGA_green_i,		-- Commande Affichage Vert
+				  b 		=> VGA_blue_i,		-- Commande Affichage Bleu
+               red         => VGA_red,        -- Affichage Pixel Rouge
+               green     => VGA_green,    -- Affichage Pixel Vert
+               blue         => VGA_blue,    -- Affichage Pixel Bleu
+               vsync     => vsync,        -- Synchro Verticale
+               hsync     => hsync,        -- Synchro Horizontale
+               visible     => visible,        -- Zone Visible de l'Image
+               endframe    => endframe,    -- Fin de l'Image Visible
+               xpos      => xpos,            -- Coordonnee X du Pixel Courant
+               ypos      => ypos);        -- Coordonnee Y du Pixel Courant
 
 
     -- INSTANCIATION MODULE DE GENERATION DE COULEURS VARIABLES
