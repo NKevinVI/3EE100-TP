@@ -313,8 +313,8 @@ pause_rqt <= own_press;
 				game_rqt 			=> game_rqt,			-- Demande de Changement de Jeu (Pong / Casse Briques)
 				
 				-- ************** REMPLACER L'INSTRUCTION CI-DESSOUS PAR CELLE EN COMMENTAIRE *****************
-				pause_rqt 			=> S1,					-- Demande de Pause - Appui sur Bouton Encodeur
-				-- pause_rqt 			=> pause_rqt,					-- Demande de Pause - Appui sur Bouton Encodeur
+				--pause_rqt 			=> S1,					-- Demande de Pause - Appui sur Bouton Encodeur
+				pause_rqt 			=> pause_rqt,					-- Demande de Pause - Appui sur Bouton Encodeur
 				-- ********************************************************************************************
 
 				endframe 			=> endframe,			-- Fin de l'Image Visible

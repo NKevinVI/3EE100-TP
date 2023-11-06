@@ -142,4 +142,3 @@ begin
 	master_slave <= mas_sla;
 
 end Behavioral;
-

@@ -1,4 +1,34 @@
 v 4
+file . "TimerLost.vhdl" "f8b507f19e1aa5472771cbd57d83f160ad99c2b7" "20231106092851.414":
+  entity timerlost at 1( 0) + 0 on 270;
+  architecture comport of timerlost at 13( 303) + 0 on 271;
+file . "brick.vhdl" "894827804b166f910dcc1748e22f7b4d57fd1dac" "20231106082615.716":
+  entity brick_ctrl at 8( 242) + 0 on 260;
+  architecture behavioral of brick_ctrl at 22( 757) + 0 on 261;
+file . "bounce.vhdl" "fd750c848c4817fba1b3e67016583fa2b0cb6deb" "20231106082608.399":
+  entity bounce at 8( 249) + 0 on 256;
+  architecture behavioral of bounce at 59( 2658) + 0 on 257;
+file . "accelero_mgr.vhdl" "857a62d01d5aeb628f9b5e1b4f424b0e03ecfd92" "20231106082532.817":
+  entity accelero_mgr at 8( 288) + 0 on 244;
+  architecture behavioral of accelero_mgr at 24( 899) + 0 on 245;
+file . "ip_rotary.vhdl" "6be58199f629a2abbd6cd44b20814cd06cda2f0f" "20231106082536.065":
+  entity ip_rotary at 8( 277) + 0 on 246;
+  architecture behavioral of ip_rotary at 20( 721) + 0 on 247;
+file . "aff_mgr_basys.vhdl" "6f61a0211acfd7d3780a40de6b242d010253fc2c" "20231106082440.757":
+  entity aff_mgr_basys at 8( 265) + 0 on 236;
+  architecture behavioral of aff_mgr_basys at 48( 1476) + 0 on 237;
+file . "button_mgr.vhdl" "68c22a1cc69787392426d396f444d7ad2b787f6f" "20231106082427.659":
+  entity button_mgr at 8( 278) + 0 on 232;
+  architecture behavioral of button_mgr at 22( 801) + 0 on 233;
+file . "ClkAcc.vhdl" "0cf20180bf0cbed4a98c269725378c90c93c7c56" "20231106082417.477":
+  entity clkacc at 1( 0) + 0 on 228;
+  architecture behavioral of clkacc at 10( 293) + 0 on 229;
+file . "game_mgr.vhdl" "0799d79b96774d7c0bb5dce953fb54250bb9b6d9" "20231106082112.919":
+  entity game_mgr at 8( 256) + 0 on 220;
+  architecture behavioral of game_mgr at 18( 610) + 0 on 221;
+file . "mas_sla_mgr.vhdl" "2b7f0081b347c9d42785717efa0672210cff215a" "20231106082055.598":
+  entity master_slave_mgr at 8( 280) + 0 on 216;
+  architecture behavioral of master_slave_mgr at 18( 664) + 0 on 217;
 file . "TB_Move.vhdl" "044a3a9244900bf38d0cff59f576aa9fb6802861" "20231101155000.936":
   entity tb_move at 1( 0) + 0 on 213;
   architecture bench of tb_move at 10( 139) + 0 on 214;
@@ -38,12 +68,47 @@ file . "TB_Clk20.vhdl" "da8ea1ab83e88646055dc367515233ab82eee977" "2023102315164
 file . "ClkDiv10.vhdl" "f41ef4d268cca478d50a94f5ee92bf65228375e4" "20231026072159.668":
   entity clkdiv10 at 1( 0) + 0 on 189;
   architecture comport of clkdiv10 at 16( 285) + 0 on 190;
-file . "Clk25.vhdl" "0248a158e58f42a1d095b319e370e2b55441c832" "20231023153119.367":
-  entity clk25 at 1( 0) + 0 on 181;
-  architecture comport of clk25 at 16( 284) + 0 on 182;
-file . "VGA_4bits.vhdl" "8487c92b4501ff1cefd8c449f868689079d12079" "20231023153126.404":
-  entity vga_4bits at 8( 302) + 0 on 183;
-  architecture archi of vga_4bits at 24( 982) + 0 on 184;
+file . "Clk25.vhdl" "0248a158e58f42a1d095b319e370e2b55441c832" "20231106082651.405":
+  entity clk25 at 1( 0) + 0 on 264;
+  architecture comport of clk25 at 16( 284) + 0 on 265;
+file . "VGA_4bits.vhdl" "5dd37916f38c874352a9d36b0dd788eea8018e60" "20231106082554.636":
+  entity vga_4bits at 8( 302) + 0 on 248;
+  architecture comport of vga_4bits at 24( 979) + 0 on 249;
 file . "TB_Clk25.vhdl" "32592b913268956b2cce364241b53c5940caa3ad" "20231023152750.275":
   entity tb_clk25 at 1( 0) + 0 on 179;
   architecture bench of tb_clk25 at 10( 140) + 0 on 180;
+file . "pong_package.vhdl" "4e6c9973d4cd16f602e264e84d836439aa2b8c21" "20231106081935.781":
+  package pong_pack at 9( 253) + 0 on 215;
+file . "display.vhdl" "e4a765dfb9e47ef8e5058ed702fdf4e2ffba89df" "20231106082107.446":
+  entity display at 8( 274) + 0 on 218;
+  architecture behavioral of display at 34( 1357) + 0 on 219;
+file . "game.vhdl" "59b77285aed8ef8ca00af21eba4fae5dde9c200a" "20231106082207.441":
+  entity game at 8( 247) + 0 on 224;
+  architecture behavioral of game at 53( 2175) + 0 on 225;
+file . "clkdiv.vhdl" "9aade9f9ad47ef4e36d02b6dd7a7a79b8d4461ec" "20231106082402.421":
+  entity clkdiv at 1( 0) + 0 on 226;
+  architecture comport of clkdiv at 12( 199) + 0 on 227;
+file . "switch_mgr.vhdl" "f3fd7988b0e50542627f3c2a4a7100fe6a3ac89e" "20231106082424.360":
+  entity switch_mgr at 8( 267) + 0 on 230;
+  architecture behavioral of switch_mgr at 22( 619) + 0 on 231;
+file . "rotary.vhdl" "56ea5ab42afb34a205ab6baf4f42eebb90469ec9" "20231106082508.426":
+  entity rotary at 8( 267) + 0 on 238;
+  architecture behavioral of rotary at 20( 724) + 0 on 239;
+file . "ADXL362Ctrl.vhdl" "cec62d054f079b5eb451ea490875f7efba11a1e8" "20231106082527.948":
+  entity adxl362ctrl at 75( 5734) + 0 on 242;
+  architecture behavioral of adxl362ctrl at 117( 6901) + 0 on 243;
+file . "decor.vhdl" "9992542a946128eb26d82b162d6a8bfa28eb204d" "20231106082600.567":
+  entity decor at 8( 286) + 0 on 252;
+  architecture behavioral of decor at 40( 1730) + 0 on 253;
+file . "pad.vhdl" "a21b2d7e3c2e27ef1a37a6f1e9609c1fbd44b86e" "20231106082604.114":
+  entity pad at 8( 243) + 0 on 254;
+  architecture behavioral of pad at 48( 2237) + 0 on 255;
+file . "ball.vhdl" "ea60a54625ecd94e2a104d5facaa724dcc368596" "20231106082611.591":
+  entity ball at 8( 249) + 0 on 258;
+  architecture behavioral of ball at 43( 1898) + 0 on 259;
+file . "objects.vhdl" "4a03f4c8d0516836448fa34a78530af7c65bad90" "20231106082628.219":
+  entity objects at 8( 289) + 0 on 262;
+  architecture behavioral of objects at 53( 2521) + 0 on 263;
+file . "TempoPause.vhdl" "87039d9e305067fd8377a028a659481c6647bdb4" "20231106092852.581":
+  entity tempopause at 1( 0) + 0 on 272;
+  architecture comport of tempopause at 13( 279) + 0 on 273;
