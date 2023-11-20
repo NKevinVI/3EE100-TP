@@ -17,10 +17,11 @@ entity Mode is
 end entity;
 
 architecture comport of Mode is
-    type state is (E0, E1);
+    type state is (Init, P_int1, P_int2,  Actif, Perd, L);
     signal Ep, Ef: state;
     signal RAZ_Tempo_Pause, Update_Tempo_Pause, Fin_Tempo_Pause: std_logic;
-    signal Load_Timer_Lost, Update_Timer_Lost, Timer_Lost: std_logic;
+    signal Load_Timer_Lost, Update_Timer_Lost: std_logic;
+    signal Timer_Lost: std_logic_vector(5 downto 0);
     begin
 
     Tempo: entity work.TempoPause(comport)
@@ -29,6 +30,80 @@ architecture comport of Mode is
     Timer: entity work.TimerLost(comport)
         port map(Load_Timer_Lost, Update_Timer_Lost, Reset, Clk25, Game_Lost, Timer_Lost);
 
-    MAE: process()
+    MAE_Etat: process(Reset, Clk25)
+        begin
+        if (Reset = '0') then
+            Ep <= Init;
+        elsif (rising_edge(Clk25)) then
+            Ep <= Ef;
+        end if;
+    end process;
+
+    MAE_Turfu: process(Ep, Ef, Clk25)
+        begin
+        case Ep is
+            when Init =>
+                Brick_Win <= '0';
+                Pause <= '1';
+                RAZ_Tempo_Pause <= '1';
+                Update_Tempo_Pause <= '0';
+                Load_Timer_Lost <= '0';
+                Update_Timer_Lost <= '0';
+                if (Pause_Rqt = '1') then
+                    Ef <= P_int2;
+                end if;
+            when Actif =>
+                Brick_Win <= no_Brick;
+                Pause <= '0';
+                RAZ_Tempo_Pause <= '1';
+                Update_Tempo_Pause <= '0';
+                Load_Timer_Lost <= '0';
+                Update_Timer_Lost <= '0';
+                if (Pause_Rqt = '1') then
+                    Ef <= P_int1;
+                elsif (Lost = '1' and No_Brick = '0') then
+                    Ef <= Perd;
+                end if;
+            when P_int1 =>
+                Brick_Win <= '0';
+                Pause <= '0';
+                RAZ_Tempo_Pause <= '0';
+                Update_Tempo_Pause <= '1';
+                Load_Timer_Lost <= '0';
+                Update_Timer_Lost <= '0';
+                if (Pause_Rqt = '0' and Fin_Tempo_Pause = '1') then
+                    Ef <= Init;
+                elsif (Lost = '1' and No_Brick = '0') then
+                    Ef <= Perd;
+                end if;
+            when P_int2 =>
+                Brick_Win <= no_Brick;
+                Pause <= '1';
+                RAZ_Tempo_Pause <= '0';
+                Update_Tempo_Pause <= '1';
+                Load_Timer_Lost <= '0';
+                Update_Timer_Lost <= '0';
+                if (Pause_Rqt = '0' and Fin_Tempo_Pause = '1') then
+                    Ef <= Actif;
+                end if;
+            when Perd =>
+                Brick_Win <= '0';
+                Pause <= '1';
+                RAZ_Tempo_Pause <= '0';
+                Update_Tempo_Pause <= '1';
+                Load_Timer_Lost <= '1';
+                Update_Timer_Lost <= '0';
+                Ef <= L;
+            when L =>
+                Brick_Win <= '0';
+                Pause <= '1';
+                RAZ_Tempo_Pause <= '0';
+                Update_Tempo_Pause <= '1';
+                Load_Timer_Lost <= '0';
+                if (Endframe = '1' and Timer_Lost > 0) then
+                    Update_Timer_Lost <= '1';
+                end if;
+            when others => null;
+        end case;
     end process;
 end architecture;

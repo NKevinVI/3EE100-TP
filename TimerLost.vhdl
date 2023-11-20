@@ -17,7 +17,7 @@ architecture comport of TimerLost is
     process(Reset, Clk25, Load_Timer_Lost, Update_Timer_Lost)
         begin
         if (Reset = '0') then
-            timer <= (others => '0');
+            timer <= (others => '1');
         else
             if (Load_Timer_Lost = '1') then
                 timer <= "111111";
