@@ -117,7 +117,7 @@ begin
 
 -----------------------------------------------------------------------------------------
 	-- GENERATEURS D'HORLOGES
-	clk25MHz: entity work.ClkDiv
+	clk25MHz: entity work.Clk25
 			port map (
 				clk100 => clk100,			-- Horloge 100 MHz
 				reset => reset,			-- Reset Asynchrone

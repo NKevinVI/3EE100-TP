@@ -8,7 +8,7 @@ port(QA,QB,reset,clk25: in std_logic;
      Rot_Left,Rot_Right: out std_logic);
 end entity;
 
-architecture comport of Move is
+architecture comport of Move1 is
 type etat is (EtatAtt_0,EtatAtt_1,G0,G1,D1,D0);
 signal EP,EF: etat ;
 begin
