@@ -15,7 +15,7 @@ architecture bench of TB_Move is
     signal clk: std_logic;
     begin
     inst: entity work.Move(comport)
-        port map(a, b, clk, res, left, right);
+        port map(a, b, res, clk, left, right);
     Clock: entity work.Clk25(comport)
         port map(Clk100, res, clk);
     res <= '1' after 30 ns;
