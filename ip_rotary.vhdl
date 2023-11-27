@@ -40,7 +40,7 @@ begin
 	---------------------------------------------------------------------
 	-- REMPLACER CES 2 INSTRUCTIONS PAR L'INSTANCIATION DU MODULE MOVE --
 	deplacement: entity work.Move(comport)
-		port map(qa, qb, clk25, reset, rot_left, rot_right);
+		port map(qa, qb, reset, clk25, rot_left, rot_right);
 	---------------------------------------------------------------------
 
 end Behavioral;
