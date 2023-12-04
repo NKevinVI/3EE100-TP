@@ -34,12 +34,13 @@ architecture comport of Mode is
         begin
         if (Reset = '0') then
             Ep <= Init;
+            Ef <= Init;
         elsif (rising_edge(Clk25)) then
             Ep <= Ef;
         end if;
     end process;
 
-    MAE_Turfu: process(Ep, Ef, Clk25)
+    MAE_Turfu: process(Ep, Pause_rqt, Lost, No_Brick, Endframe)
         begin
         case Ep is
             when Init =>
