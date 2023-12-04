@@ -34,7 +34,6 @@ architecture comport of Mode is
         begin
         if (Reset = '0') then
             Ep <= Init;
-            Ef <= Init;
         elsif (rising_edge(Clk25)) then
             Ep <= Ef;
         end if;
@@ -52,6 +51,8 @@ architecture comport of Mode is
                 Update_Timer_Lost <= '0';
                 if (Pause_Rqt = '1') then
                     Ef <= P_int2;
+                else
+                    Ef <= Init;
                 end if;
             when Actif =>
                 Brick_Win <= no_Brick;
