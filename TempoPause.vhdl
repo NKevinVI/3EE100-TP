@@ -20,8 +20,12 @@ architecture comport of TempoPause is
         else
             if (RAZ_Tempo_Pause = '1' and rising_edge(Clk25)) then
                 incr <= (others => '0');
-            elsif (Update_Tempo_Pause = '1' and rising_edge(Clk25)) then
-                incr <= incr+1;
+            elsif (rising_edge(Clk25)) then
+                if (RAZ_Tempo_Pause = '1') then
+                    incr <= (others => '0');
+                elsif (Update_Tempo_Pause = '1') then
+                    incr <= incr+1;
+                end if;
             end if;
         end if;
     end process;
