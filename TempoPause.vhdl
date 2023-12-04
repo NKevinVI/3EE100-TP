@@ -13,7 +13,7 @@ end entity;
 architecture comport of TempoPause is
     signal incr: std_logic_vector(9 downto 0);
     begin
-    process(Reset, Clk25, RAZ_Tempo_Pause, Update_Tempo_Pause)
+    process(Reset, Clk25)
         begin
         if (Reset = '0') then
             incr <= (others => '0');

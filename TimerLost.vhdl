@@ -14,7 +14,7 @@ architecture comport of TimerLost is
     signal timer: std_logic_vector(5 downto 0);
     begin
     Timer_Lost <= timer;
-    process(Reset, Clk25, Load_Timer_Lost, Update_Timer_Lost)
+    process(Reset, Clk25)
         begin
         if (Reset = '0') then
             timer <= (others => '1');
