@@ -65,7 +65,7 @@ architecture comport of Mode is
                     Ef <= Perd;
                 end if;
             when P_int1 =>
-                Brick_Win <= '0';
+                Brick_Win <= No_Brick;
                 Pause <= '0';
                 RAZ_Tempo_Pause <= '0';
                 Update_Tempo_Pause <= '1';
@@ -77,7 +77,7 @@ architecture comport of Mode is
                     Ef <= Perd;
                 end if;
             when P_int2 =>
-                Brick_Win <= no_Brick;
+                Brick_Win <= '0';
                 Pause <= '1';
                 RAZ_Tempo_Pause <= '0';
                 Update_Tempo_Pause <= '1';
