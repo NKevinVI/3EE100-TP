@@ -128,7 +128,7 @@ begin
 	barrier_actif: process(clk25, reset, game_type, obstacle)
 		begin
 		if (game_type = '0' and obstacle = '1' then
-			if (ypos = '100111100') then
+			if (ypos = '100111110' or ypos = '100111101' or ypos = '100111100' or ypos = '100111011' or ypos = '100111010' or ypos = '100111001' or ypos = '100111000' or ypos = '100110111') then
 				ybarrier = '1';
 			else
 				ybarrier = '0';
