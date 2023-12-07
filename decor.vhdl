@@ -40,7 +40,7 @@ end decor;
 architecture Behavioral of decor is
 
 signal ybarrier: std_logic;						-- Coordonnees Y du Pixel dans la Zone de l'Obstacle
-signal xbarrier: std_logic_vector(9 downto 0);	-- Corrdonnees en X de l'Obstacle
+signal xbarrier: std_logic_vector(9 downto 0);	-- Coordonnees en X de l'Obstacle
 signal direction: std_logic;					-- Sens de Deplacement de l'Obstacle
 
 begin
@@ -125,10 +125,26 @@ begin
 
 	ybarrier	<= '0';
 	xbarrier	<= (others => '0');
-	barrier	<= '0';
+	barrier_actif: process(clk25, reset, game_type, obstacle)
+		begin
+		if (game_type = '0' and obstacle = '1' then
+			if (ypos = '10011110') then
+				ybarrier = '1';
+			else
+				ybarrier = '0';
+			end if;
+
+			if (xpos = xbarrier and ybarrier = '1') then
+				if (Direction = '1') then
+					xbarrier = xbarrier+2;
+				else
+					xbarrier = xbarrier-2;
+				end if;
+			end if;
+		end if;
+	end process;
 
 -------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
 end Behavioral;
-
