@@ -149,10 +149,10 @@ begin
             if (rising_edge(endframe)) then
                 if (xbarrier <= "0000000000") then
                     Direction <= '1';
-                elsif (xbarrier >= "0100001111") then
+                elsif (xbarrier >= "0100011011") then
                     Direction <= '0';
                 end if;
-                if (Direction = '1' and xbarrier < "0100001111") then
+                if (Direction = '1' and xbarrier < "0100011011") then
                     xbarrier <= xbarrier+2;
                 elsif (Direction = '0' and xbarrier > "0000000000") then
                     xbarrier <= xbarrier-2;
