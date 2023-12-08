@@ -123,35 +123,43 @@ begin
 
 	-- AJOUTER ICI LE CODE POUR LA GESTION DE L'OBSTACLE
 
-	ybarrier	<= '0';
-	xbarrier	<= (others => '0');
-	Direction	<= '1';
-	barrier_actif: process(clk25, reset, game_type, obstacle)
-		begin
-		if (game_type = '0' and obstacle = '1') then
-			if (ypos = "0100111110" or ypos = "0100111111" or ypos = "0101000000" or ypos = "0101000001" or ypos = "0101000010" or ypos = "0101000011" or ypos = "0101000100" or ypos = "0101000101") then
-				ybarrier <= '1';
-			else
-				ybarrier <= '0';
-			end if;
+    barrier_actif: process(clk25, reset, game_type, obstacle, ypos, xpos)
+        begin
+        if (Reset = '0') then
+            xbarrier <= "0000000000";
+            ybarrier <= '0';
+            Direction <= '1';
+            barrier <= '0';
+        else
+            if (rising_edge(clk25)) then
+                if (game_type = '0' and obstacle = '1') then
+                    if (ypos = "0011100110" or ypos = "0011100111" or ypos = "0011101000" or ypos = "0011101001" or ypos = "0011101010" or ypos = "0011101001" or ypos = "0011101000" or ypos = "0011100111") then
+                        ybarrier <= '1';
+                    else
+                        ybarrier <= '0';
+                    end if;
 
-			if (xpos >= xbarrier and xpos <= xbarrier+100 and ybarrier = '1') then
-				barrier <= '1';
-				if (xbarrier <= 0) then
-					Direction <= '1';
-				elsif (xbarrier >= 539) then
-					Direction <= '0';
-				end if;
-				if (Direction = '1') then
-					xbarrier <= xbarrier+2;
-				else
-					xbarrier <= xbarrier-2;
-				end if;
-			else
-				barrier <= '0';
-			end if;
-		end if;
-	end process;
+                    if (xpos >= xbarrier and xpos <= xbarrier+100 and ybarrier = '1') then
+                        barrier <= '1';
+                    else
+                        barrier <= '0';
+                    end if;
+                end if;
+            end if;
+            if (rising_edge(endframe)) then
+                if (xbarrier <= "0000000000") then
+                    Direction <= '1';
+                elsif (xbarrier >= "0100001111") then
+                    Direction <= '0';
+                end if;
+                if (Direction = '1' and xbarrier < "0100001111") then
+                    xbarrier <= xbarrier+2;
+                elsif (Direction = '0' and xbarrier > "0000000000") then
+                    xbarrier <= xbarrier-2;
+                end if;
+            end if;
+        end if;
+    end process;
 
 -------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
