@@ -1,0 +1,211 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Dec  7 21:20:09 2023
+# Process ID: 21696
+# Current directory: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13592 C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.xpr
+# Log file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/vivado.log
+# Journal file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.xpr}
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Sun'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'E:/vhdl/VGA/Yujia/Desktop/PROPRE/Yujia/Desktop/PROPRE/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/Desktop/PROPRE/Yujia/Desktop/PROPRE/Yujia/Desktop/PROPRE/Yujia/Desktop/TP_MC/Yujia/Desktop/vivado/Essaie1/Yujia/Desktop/vivado/Essaie1/Yujia/Desktop/VGA_4Bits/Yujia/Desktop/VGA_4Bits/Yujia/Desktop/VGA_4Bits/Yujia/Desktop/vivado/Vivado/VGA_4Bits/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/Desktop/vivado/Vivado/Esaaie2/Yujia/Desktop/vivado/Vivado/Essaie1/Yujia/Desktop/vivado/Vivado/Esaaie2/Yujia/Desktop/vivado/Vivado/TP1/Yujia/Desktop/vivado/Vivado/TP/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/Desktop/vivado/Vivado/TP1/Yujia/Desktop/CLe/VGA/Yujia/Desktop/CLe/TP1/Yujia/Desktop/vivado/Vivado/TP1/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store'.
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 21:21:20 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Thu Dec  7 21:21:51 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Dec  7 21:22:28 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1203.996 ; gain = 16.117
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15A3EA
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new}
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new/Mode.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new/Mode.vhd}}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 21:43:29 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Thu Dec  7 21:44:01 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Dec  7 21:44:38 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2828.242 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15A3EA
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new/Mode1.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new/Mode1.vhd}}
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Tempo_Pause.vhd} {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/TimerLost.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 22:14:09 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new/Mode1.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new/Mode1.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Tempo_Pause.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Tempo_Pause.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/TimerLost.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/TimerLost.vhd}}
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 22:17:49 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new/Mode.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/new/Mode.vhd}}
+import_files -norecurse {{C:/Users/Sun Yujia/Desktop/decor.vhdl}}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'decor(Behavioral)' found in library 'xil_defaultlib'
+	(Active) Duplicate found at line 40 of file C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/imports/VHDL/decor.vhd
+Duplicate found in file C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.srcs/sources_1/imports/Desktop/decor.vhdl
+[Thu Dec  7 22:23:35 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Thu Dec  7 22:24:19 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Dec  7 22:25:08 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2896.148 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15A3EA
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  7 22:32:13 2023...

@@ -1,0 +1,115 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Dec  7 18:15:56 2023
+# Process ID: 6640
+# Current directory: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17512 C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.xpr
+# Log file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/vivado.log
+# Journal file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+create_project Mode {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode} -part xc7vx485tffg1157-1
+set_property target_language VHDL [current_project]
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+file mkdir {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new}
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Mode.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Mode.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+current_project MovingColor_TopBasys
+current_project Mode
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Tempo_Pause.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Tempo_Pause.vhd}}
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Timer_Lost.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Timer_Lost.vhd}}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/TimerLost.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/TimerLost.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+current_project MovingColor_TopBasys
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+close_project

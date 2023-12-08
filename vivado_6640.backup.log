@@ -1,0 +1,242 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Dec  7 18:15:56 2023
+# Process ID: 6640
+# Current directory: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17512 C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.xpr
+# Log file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/vivado.log
+# Journal file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.xpr}
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Sun'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'E:/vhdl/VGA/Yujia/Desktop/PROPRE/Yujia/Desktop/PROPRE/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/Desktop/PROPRE/Yujia/Desktop/PROPRE/Yujia/Desktop/PROPRE/Yujia/Desktop/TP_MC/Yujia/Desktop/vivado/Essaie1/Yujia/Desktop/vivado/Essaie1/Yujia/Desktop/VGA_4Bits/Yujia/Desktop/VGA_4Bits/Yujia/Desktop/VGA_4Bits/Yujia/Desktop/vivado/Vivado/VGA_4Bits/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/Desktop/vivado/Vivado/Esaaie2/Yujia/Desktop/vivado/Vivado/Essaie1/Yujia/Desktop/vivado/Vivado/Esaaie2/Yujia/Desktop/vivado/Vivado/TP1/Yujia/Desktop/vivado/Vivado/TP/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/Desktop/vivado/Vivado/TP1/Yujia/Desktop/CLe/VGA/Yujia/Desktop/CLe/TP1/Yujia/Desktop/vivado/Vivado/TP1/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store'.
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 18:18:19 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Thu Dec  7 18:19:30 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 18:21:41 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Thu Dec  7 18:22:21 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Dec  7 18:23:09 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1189.895 ; gain = 14.945
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15A3EA
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+create_project Mode {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode} -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2020.2/data/ip'.
+set_property target_language VHDL [current_project]
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new
+can't create directory "C:/Users/Sun": permission denied
+file mkdir {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new}
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Mode.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Mode.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP_corrig¨¦\VIVADO_TP\ip_rotary\TP2.srcs\sources_1\new\Move.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.srcs\sources_1\imports\VHDL\ip_rotary.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+current_project MovingColor_TopBasys
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.srcs\sources_1\imports\VHDL\mas_sla_mgr.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.srcs\sources_1\imports\VHDL\game_mgr.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP_corrig¨¦\VIVADO_TP\ip_rotary\TP2.srcs\sources_1\new\Move.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.srcs\sources_1\imports\VHDL\ip_rotary.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.srcs\sources_1\imports\VHDL\game.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.srcs\sources_1\imports\VHDL\mas_sla_mgr.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.srcs\sources_1\imports\VHDL\game_mgr.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP_corrig¨¦\VIVADO_TP\ip_rotary\TP2.srcs\sources_1\new\Move.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.srcs\sources_1\imports\VHDL\ip_rotary.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys\MovingColor_TopBasys.srcs\sources_1\imports\VHDL\game.vhd:]
+current_project Mode
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Tempo_Pause.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Tempo_Pause.vhd}}
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Timer_Lost.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/Timer_Lost.vhd}}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/TimerLost.vhd} w ]
+add_files {{C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.srcs/sources_1/new/TimerLost.vhd}}
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\Mode\Mode.srcs\sources_1\new\Mode.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\Mode\Mode.srcs\sources_1\new\Tempo_Pause.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Sun Yujia\Desktop\VIVADO_TP\Mode\Mode.srcs\sources_1\new\TimerLost.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 20:36:26 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/Mode/Mode.runs/synth_1/runme.log
+current_project MovingColor_TopBasys
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 20:52:32 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 20:53:15 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Thu Dec  7 20:53:44 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Dec  7 20:54:26 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3087.113 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15A3EA
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec  7 20:57:21 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Thu Dec  7 20:57:59 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Dec  7 20:58:36 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3087.113 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B15A3EA
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys/MovingColor_TopBasys.runs/impl_1/top_baxys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  7 21:05:59 2023...

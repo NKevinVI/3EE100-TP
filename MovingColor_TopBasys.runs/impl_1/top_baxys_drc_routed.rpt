@@ -1,0 +1,60 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Dec  8 17:40:57 2023
+| Host         : LAPTOP-7OOS3ACD running 64-bit major release  (build 9200)
+| Command      : report_drc -file top_baxys_drc_routed.rpt -pb top_baxys_drc_routed.pb -rpx top_baxys_drc_routed.rpx
+| Design       : top_baxys
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 3
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 2          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net clk25Hz/CLK is a gated clock net sourced by a combinational pin clk25Hz/ypong_left[8]_i_2/O, cell clk25Hz/ypong_left[8]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net game_ctrl/Mode/Timer_Lost/timer0 is a gated clock net sourced by a combinational pin game_ctrl/Mode/Timer_Lost/timer_reg[5]_i_2/O, cell game_ctrl/Mode/Timer_Lost/timer_reg[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT clk25Hz/ypong_left[8]_i_2 is driving clock pin of 17 cells. This could lead to large hold time violations. Involved cells are:
+obj_ctrl/pad_ctrl/xpad_reg[1], obj_ctrl/pad_ctrl/xpad_reg[2],
+obj_ctrl/pad_ctrl/xpad_reg[3], obj_ctrl/pad_ctrl/xpad_reg[4],
+obj_ctrl/pad_ctrl/xpad_reg[5], obj_ctrl/pad_ctrl/xpad_reg[6],
+obj_ctrl/pad_ctrl/xpad_reg[7], obj_ctrl/pad_ctrl/xpad_reg[8],
+obj_ctrl/pad_ctrl/xpad_reg[9], obj_ctrl/pad_ctrl/ypong_left_reg[1],
+obj_ctrl/pad_ctrl/ypong_left_reg[2], obj_ctrl/pad_ctrl/ypong_left_reg[3],
+obj_ctrl/pad_ctrl/ypong_left_reg[4], obj_ctrl/pad_ctrl/ypong_left_reg[5],
+obj_ctrl/pad_ctrl/ypong_left_reg[6] (the first 15 of 17 listed)
+Related violations: <none>
+
+

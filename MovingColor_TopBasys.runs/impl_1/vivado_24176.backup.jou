@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Dec  8 17:29:34 2023
+# Process ID: 24176
+# Current directory: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys_essaie/MovingColor_TopBasys.runs/impl_1
+# Command line: vivado.exe -log top_baxys.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_baxys.tcl -notrace
+# Log file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys_essaie/MovingColor_TopBasys.runs/impl_1/top_baxys.vdi
+# Journal file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys_essaie/MovingColor_TopBasys.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source top_baxys.tcl -notrace

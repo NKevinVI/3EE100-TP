@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Dec  8 14:19:49 2023
+# Process ID: 25556
+# Current directory: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys_essaie
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18292 C:\Users\Sun Yujia\Desktop\VIVADO_TP\MovingColor_Move_TopBasys_essaie\MovingColor_TopBasys.xpr
+# Log file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys_essaie/vivado.log
+# Journal file: C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys_essaie\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys_essaie/MovingColor_TopBasys.xpr}
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Sun'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'E:/vhdl/VGA/Yujia/Desktop/PROPRE/Yujia/Desktop/PROPRE/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/Desktop/PROPRE/Yujia/Desktop/PROPRE/Yujia/Desktop/PROPRE/Yujia/Desktop/TP_MC/Yujia/Desktop/vivado/Essaie1/Yujia/Desktop/vivado/Essaie1/Yujia/Desktop/VGA_4Bits/Yujia/Desktop/VGA_4Bits/Yujia/Desktop/VGA_4Bits/Yujia/Desktop/vivado/Vivado/VGA_4Bits/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/Desktop/vivado/Vivado/Esaaie2/Yujia/Desktop/vivado/Vivado/Essaie1/Yujia/Desktop/vivado/Vivado/Esaaie2/Yujia/Desktop/vivado/Vivado/TP1/Yujia/Desktop/vivado/Vivado/TP/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/Desktop/vivado/Vivado/TP1/Yujia/Desktop/CLe/VGA/Yujia/Desktop/CLe/TP1/Yujia/Desktop/vivado/Vivado/TP1/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/Yujia/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store'.
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Sun Yujia/Desktop/VIVADO_TP/MovingColor_Move_TopBasys_essaie/MovingColor_TopBasys.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  8 14:23:31 2023...
