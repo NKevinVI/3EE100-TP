@@ -125,17 +125,18 @@ begin
 
 	ybarrier	<= '0';
 	xbarrier	<= (others => '0');
-	Direction <= '1';
+	Direction	<= '1';
 	barrier_actif: process(clk25, reset, game_type, obstacle)
 		begin
 		if (game_type = '0' and obstacle = '1') then
-			if (ypos = "100111110" or ypos = "100111111" or ypos = "101000000" or ypos = "101000001" or ypos = "101000010" or ypos = "101000011" or ypos = "101000100" or ypos = "101000101") then
+			if (ypos = "0100111110" or ypos = "0100111111" or ypos = "0101000000" or ypos = "0101000001" or ypos = "0101000010" or ypos = "0101000011" or ypos = "0101000100" or ypos = "0101000101") then
 				ybarrier <= '1';
 			else
 				ybarrier <= '0';
 			end if;
 
 			if (xpos >= xbarrier and xpos <= xbarrier+100 and ybarrier = '1') then
+				barrier <= '1';
 				if (xbarrier <= 0) then
 					Direction <= '1';
 				elsif (xbarrier >= 539) then
@@ -146,6 +147,8 @@ begin
 				else
 					xbarrier <= xbarrier-2;
 				end if;
+			else
+				barrier <= '0';
 			end if;
 		end if;
 	end process;
